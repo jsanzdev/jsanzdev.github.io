@@ -18,15 +18,17 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Jesus Sanz - Game Developer / Software Engineer
+title: Jesus Sanz
 email: jesus@jsanz.dev
 description: >- # this means to ignore newlines until "baseurl:"
-  Hi there! My name is Jesus and I'm a game developer (Game Boy, Unreal Engine, Unity and Godot) and a Software Engineer (Swift, C++, WebApps). I also love technology so you might see some cool projects here too.
+  Game Developer / Software Engineer
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://jsanz.dev" # the base hostname & protocol for your site, e.g. http://example.com
 
-paginate: 5
-paginate_path: "/blog/page:num/"
+show_downloads: false
+
+#paginate: 5
+#paginate_path: "/blog/page:num/"
 
 
 # supported colors: green, red, orange, blue, cyan, pink, teal, yellow, indigo, purple
@@ -55,6 +57,7 @@ github_username: jsanzdev
 remote_theme: pages-themes/architect@v0.2.0
 plugins:
   - jekyll-remote-theme
+  - "jekyll-github-metadata"
 
 # Exclude from processing.
 # The following items will not be processed, by default.
