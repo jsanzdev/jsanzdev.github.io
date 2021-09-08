@@ -52,10 +52,9 @@ github_username: jsanzdev
 
 
 # Build settings
-theme: jekyll-dash
+remote_theme: pages-themes/architect@v0.2.0
 plugins:
-  - jekyll-feed
-  - jekyll-seo-tag
+  - jekyll-remote-theme
 
 # Exclude from processing.
 # The following items will not be processed, by default.
