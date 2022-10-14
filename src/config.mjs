@@ -2,7 +2,7 @@ export const SITE = {
 	name: 'Jesus Sanz',
 
 	origin: 'https://jsanz.dev',
-	basePathname: '/jsanzdev.github.io',
+	basePathname: '/',
 
 	title: 'Jesus Sanz | iOS Developer',
 	description: '🧑🏻‍💻 Jesus Sanz | iOS Developer Portfolio',
