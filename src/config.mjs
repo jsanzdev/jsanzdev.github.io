@@ -35,3 +35,27 @@ export const BLOG = {
 		pathname: 'tag', // set empty to change from /tag/some-tag to /some-tag
 	},
 };
+export const PORT = {
+	disabled: false,
+	postsPerPage: 4,
+
+	portfolio: {
+		disabled: false,
+		pathname: 'portfolio', // portfolio main path, you can change this to "articles" (/articles)
+	},
+
+	portfolioPost: {
+		disabled: false,
+		pathname: 'portfolio-post', // empty for /some-post, value for /pathname/some-post 
+	},
+
+	category: {
+		disabled: true,
+		pathname: 'category', // set empty to change from /category/some-category to /some-category
+	},
+
+	tag: {
+		disabled: true,
+		pathname: 'tag', // set empty to change from /tag/some-tag to /some-tag
+	},
+};

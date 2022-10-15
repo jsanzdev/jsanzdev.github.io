@@ -33,7 +33,7 @@ const meta = {
 
 <Layout {meta}>
 	<Fragment slot="title">
-		Blog Posts
+		<span class="bg-clip-text text-transparent bg-gradient-to-r from-secondary-600 to-primary-600">Blog Posts</span>
 	</Fragment>
 	<BlogList posts={page.data} />
 	<Pagination prevUrl={page.url.prev} nextUrl={page.url.next} />

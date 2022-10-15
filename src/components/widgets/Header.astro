@@ -4,7 +4,7 @@ import Logo from '~/components/atoms/Logo.astro';
 import ToggleTheme from '~/components/core/ToggleTheme.astro';
 import ToggleMenu from '~/components/core/ToggleMenu.astro';
 
-import { getPermalink, getBlogPermalink, getHomePermalink } from '~/utils/permalinks';
+import { getPermalink, getBlogPermalink, getPortfolioPermalink, getHomePermalink } from '~/utils/permalinks';
 ---
 
 <header
@@ -31,7 +31,7 @@ import { getPermalink, getBlogPermalink, getHomePermalink } from '~/utils/permal
 				<li>
 					<a
 						class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out"
-						href="#">Portfolio</a
+						href={getPortfolioPermalink()}>Portfolio</a
 					>
 				</li>
 				<li>
@@ -39,6 +39,20 @@ import { getPermalink, getBlogPermalink, getHomePermalink } from '~/utils/permal
 						class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out"
 						href={getBlogPermalink()}>Blog</a
 					>
+				</li>
+				<li class="md:hidden">
+					<a
+						class="font-bold hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out"
+						href="https://www.linkedin.com/in/jesussanzperez/"
+						>Linkedin
+					</a>
+				</li>
+				<li class="md:hidden">
+					<a
+						class="font-bold hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out"
+						href="https://twitter.com/jsanz_dev"
+						>Twitter
+					</a>
 				</li>
 				<li class="md:hidden">
 					<a
@@ -54,14 +68,14 @@ import { getPermalink, getBlogPermalink, getHomePermalink } from '~/utils/permal
 					<a
 						href="https://www.linkedin.com/in/jesussanzperez/"
 						class="inline-block text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5"
-						aria-label="Jesus Sanz Github"
+						aria-label="Jesus Sanz Linkedin"
 					>
 						<Icon name="tabler:brand-linkedin" class="w-5 h-5" />
 					</a>
 					<a
 						href="https://twitter.com/jsanz_dev"
 						class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center"
-						aria-label="Twitter"
+						aria-label="Jesus Sanz Twitter"
 						href="#"
 					>
 						<Icon name="tabler:brand-twitter" class="w-5 h-5" />

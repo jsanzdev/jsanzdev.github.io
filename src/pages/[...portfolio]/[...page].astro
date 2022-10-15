@@ -1,0 +1,64 @@
+---
+import { SITE, PORT } from '~/config.mjs';
+
+import Layout from '~/layouts/BlogLayout.astro';
+import PortfolioList from '~/components/portfolio/PortfolioList.astro';
+import Pagination from '~/components/atoms/Pagination.astro';
+import Picture from '~/components/core/Picture.astro';
+
+import { fetchPortfolios } from '~/utils/portfolios';
+import { getCanonical, getPermalink, PORT_BASE } from '~/utils/permalinks';
+
+export async function getStaticPaths({ paginate }) {
+	if (PORT?.disabled || PORT?.porfolio?.disabled) return [];
+
+	const portfolios = await fetchPortfolios();
+
+	return paginate(portfolios, {
+		params: { portfolio: PORT_BASE || undefined },
+		pageSize: PORT.postsPerPage,
+	});
+}
+
+const { page } = Astro.props;
+const currentPage = page.currentPage ?? 1;
+
+const meta = {
+	title: `Portfolio ${currentPage > 1 ? `— Page ${currentPage} ` : ''}— ${SITE.name}`,
+	description: SITE.description,
+	canonical: getCanonical(getPermalink(page.url.current)),
+	ogType: "portfolio",
+	noindex: currentPage > 1
+};
+---
+
+<Layout {meta}>
+	<Fragment slot="title">
+		<span class="bg-clip-text text-transparent bg-gradient-to-r from-secondary-600 to-primary-600">Portfolio</span>
+		<h1 class="text-5xl md:text-[3.50rem] font-bold leading-tighter tracking-tighter mb-4 font-heading">
+			Coming Soon!
+		</h1>
+		<div class="max-w-3xl mx-auto">
+			<p class="text-xl text-gray-600 mb-8 dark:text-slate-400">
+				I'm currently working on some projects, once they are ready I will post them here
+			</p>
+			<p class="text-xl text-gray-600 mb-8 dark:text-slate-400">
+				Happy Coding!
+			</p>
+		</div>
+		<div>
+			<div class="relative mb-8 m-auto max-w-3xl">
+				<Picture
+					src={import('~/assets/images/apple-dev.webp')}
+					class="mx-auto rounded-md shadow-lg bg-gray-400 dark:bg-slate-700 w-full"
+					widths={[400, 767]}
+					sizes=" (max-width: 767px) 400px, 768px"
+					alt="Jesus Sanz Avatar"
+					aspectRatio="16:9"
+				/>
+			</div>
+		</div>
+	</Fragment>
+	<!-- <PortfolioList portfolios={page.data} /> -->
+	<Pagination prevUrl={page.url.prev} nextUrl={page.url.next} />
+</Layout>
