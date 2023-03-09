@@ -36,25 +36,50 @@ const meta = {
 	<Fragment slot="title">
 		<span class="bg-clip-text text-transparent bg-gradient-to-r from-secondary-600 to-primary-600">Portfolio</span>
 		<h1 class="text-5xl md:text-[3.50rem] font-bold leading-tighter tracking-tighter mb-4 font-heading">
-			Coming Soon!
+			The Big Bang Theory Episode Guide APP!
 		</h1>
 		<div class="max-w-3xl mx-auto">
 			<p class="text-xl text-gray-600 mb-8 dark:text-slate-400">
-				I'm currently working on some projects, once they are ready I will post them here
+				Are you a fan of The Big Bang Theory? I have an episode guide for you! Using SwiftUI, Swift and API rest with the series episodes and info I built an application to help you track your favorite episodes.
 			</p>
 			<p class="text-xl text-gray-600 mb-8 dark:text-slate-400">
-				Happy Coding!
+				You can see the application in my GitHub repository -> <a href="https://github.com/jsanzdev/BBTGuide">Click here!</a>
 			</p>
 		</div>
 		<div>
 			<div class="relative mb-8 m-auto max-w-3xl">
 				<Picture
-					src={import('~/assets/images/apple-dev.webp')}
-					class="mx-auto rounded-md shadow-lg bg-gray-400 dark:bg-slate-700 w-full"
-					widths={[400, 767]}
-					sizes=" (max-width: 767px) 400px, 768px"
-					alt="Jesus Sanz Avatar"
-					aspectRatio="16:9"
+					src={import('~/assets/images/tbbt.png')}
+					class="mx-auto rounded-md shadow-lg bg-gray-400 dark:bg-slate-700"
+					widths={[400, 100]}
+					sizes=" (max-width: 100px) 400px, 100px"
+					alt="The Big Bang Theory Episode Guide"
+					aspectRatio="9:20"
+				/>
+			</div>
+		</div>
+		<br>
+		<br>
+		<h1 class="text-5xl md:text-[3.50rem] font-bold leading-tighter tracking-tighter mb-4 font-heading">
+			Story Book - A book Store!
+		</h1>
+		<div class="max-w-3xl mx-auto">
+			<p class="text-xl text-gray-600 mb-8 dark:text-slate-400">
+				Using SwiftUI, Swift and API rest with the series episodes and info I built a Book Store application. The API that I worked with had different functions like geting random books as the latest books. I also used the API to get the book details and the book cover. You can mark books as read and see the list on a different tab. All the data is in the server and nothing is stored on the device.
+			</p>
+			<p class="text-xl text-gray-600 mb-8 dark:text-slate-400">
+				You can see the application in my GitHub repository -> <a href="https://github.com/jsanzdev/BookStory">Click here!</a>
+			</p>
+		</div>
+		<div>
+			<div class="relative mb-8 m-auto max-w-3xl">
+				<Picture
+					src={import('~/assets/images/bookstory.png')}
+					class="mx-auto rounded-md shadow-lg bg-gray-400 dark:bg-slate-700"
+					widths={[400, 100]}
+					sizes=" (max-width: 200px) 400px, 100px"
+					alt="The Big Bang Theory Episode Guide"
+					aspectRatio="9:20"
 				/>
 			</div>
 		</div>

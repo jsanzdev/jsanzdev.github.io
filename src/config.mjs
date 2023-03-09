@@ -4,8 +4,8 @@ export const SITE = {
 	origin: 'https://jsanz.dev',
 	basePathname: '/',
 
-	title: 'Jesus Sanz | iOS Developer',
-	description: '🧑🏻‍💻 Jesus Sanz | iOS Developer Portfolio',
+	title: 'Jesus Sanz | iOS Softwre Engineer',
+	description: '🧑🏻‍💻 Jesus Sanz | iOS Software Engineer Portfolio',
 
 	// googleAnalyticsId: false, // or "G-XXXXXXXXXX",
 	// googleSiteVerificationId: 'orcPxI47GSa-cRvY11tUe6iGg2IO_RPvnA1q95iEM3M',
