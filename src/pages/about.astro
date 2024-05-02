@@ -1,0 +1,129 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+import ContactCTA from "../components/ContactCTA.astro";
+import Hero from "../components/Hero.astro";
+import Icon from "../components/Icon.astro";
+---
+
+<BaseLayout
+  title="About | Jesus Sanz"
+  description="About page from Jesus Sanz. Learn more about my background, education, and skills."
+>
+  <div class="stack gap-20">
+    <main class="wrapper about">
+      <Hero
+        title="About"
+        tagline="Thanks for stopping by. Read below to learn more about myself and my background."
+      >
+        <!-- <img width="1553" height="873" src="/assets/at-work.jpg" alt="" /> -->
+      </Hero>
+
+      <section>
+        <h2 class="section-title">Background</h2>
+        <div class="content">
+          <p>
+            I'm a passionate software engineer with a strong foundation in
+            coding and technology. This foundation fuels my work as a Lead
+            Engineer, where I leverage expertise in TypeScript, Swift, SwiftUI,
+            Bash, PowerShell, C++ (and more!) to tackle complex challenges and
+            build innovative solutions.
+          </p>
+          <p>
+            But my journey in software development wasn't linear. In 2019, I
+            graduated from SAE Institute in London with a degree in Games
+            Programming. Afterward, I took a unique path, wearing three hats
+            simultaneously: System Administrator, DevOps Engineer, and Developer
+            at an IT Support Company. This experience broadened my skillset and
+            solidified my passion for building applications that make a
+            difference in people's daily lives.
+          </p>
+          <p>
+            This passion propelled me to join a Swift Developer Program that
+            concluded in January 2023. I'm currently studying a Masters in
+            Frontend technologies such as React, Angular, Vue..., expanding my
+            knowledge to create even more impactful applications.
+          </p>
+        </div>
+      </section>
+      <section>
+        <h2 class="section-title">Education</h2>
+        <div class="content">
+          <p>Master FrontEnd Online (Online, LemonCode, 2024-Current)</p>
+          <p>Swift Developer Program (Madrid, Apple Coding Academy, 2023)</p>
+          <p>BSC Games Programming (London, SAE Institute, 2019)</p>
+        </div>
+      </section>
+      <section>
+        <h2 class="section-title">Skills</h2>
+        <div class="content">
+          <p><Icon icon="typescript" size="1.33em" />TypeScript</p>
+          <p><Icon icon="javascript" size="1.33em" />JavaScript</p>
+          <p><Icon icon="react" size="1.33em" />React</p>
+          <p><Icon icon="terminal-window" size="1.33em" />Bash & Powershell</p>
+          <p><Icon icon="apple-logo" size="1.33em" />Swift & SwiftUI</p>
+        </div>
+      </section>
+    </main>
+
+    <ContactCTA />
+  </div>
+</BaseLayout>
+
+<style>
+  .about {
+    display: flex;
+    flex-direction: column;
+    gap: 3.5rem;
+  }
+
+  img {
+    margin-top: 1.5rem;
+    border-radius: 1.5rem;
+    box-shadow: var(--shadow-md);
+  }
+
+  section {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    color: var(--gray-200);
+  }
+
+  .section-title {
+    grid-column-start: 1;
+    font-size: var(--text-xl);
+    color: var(--gray-0);
+  }
+
+  .content {
+    grid-column: 2 / 4;
+  }
+
+  .content :global(a) {
+    text-decoration: 1px solid underline transparent;
+    text-underline-offset: 0.25em;
+    transition: text-decoration-color var(--theme-transition);
+  }
+
+  .content :global(a:hover),
+  .content :global(a:focus) {
+    text-decoration-color: currentColor;
+  }
+
+  @media (min-width: 50em) {
+    .about {
+      display: grid;
+      grid-template-columns: 1fr 60% 1fr;
+    }
+
+    .about > :global(:first-child) {
+      grid-column-start: 2;
+    }
+
+    section {
+      display: contents;
+      font-size: var(--text-lg);
+    }
+  }
+</style>

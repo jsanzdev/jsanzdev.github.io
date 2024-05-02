@@ -1,11 +1,8 @@
 ---
-import Layout from '~/layouts/BaseLayout.astro';
-import { SITE } from '~/config.mjs';
-import Error404 from '~/components/widgets/Error404.astro';
-
-const title = `Error 404 — ${SITE.name}`;
+import Hero from '../components/Hero.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
-<Layout meta={{ title }}>
-	<Error404 />
-</Layout>
+<BaseLayout title="Not Found" description="404 Error — this page was not found">
+	<Hero title="Page Not Found" tagline="Not found" />
+</BaseLayout>
